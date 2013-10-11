@@ -29,6 +29,6 @@ before_script:
   - "git clone git://github.com/coolwanglu/pdf2htmlEX.git"
   - "cd pdf2htmlEX"
   - "cmake . && make && sudo make install"
-  - "export 
+  - "export"
 
 script: "npm test"
