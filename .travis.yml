@@ -6,10 +6,11 @@ node_js:
 env:
   - LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 
-before_script:
-  - "npm install --dev"
+before_install:
   - "sudo apt-get update"
   - "sudo apt-get install -y autoconf libtool libpng12-dev zlibc zlib1g-dev libtiff-dev libungif4-dev libjpeg-dev libxml2-dev libuninameslist-dev xorg-dev subversion cvs gettext git libpango1.0-dev libcairo2-dev python-dev uuid-dev libreadline-dev cmake util-linux pkg-config libpng-dev poppler-data git libfontconfig-dev gettext libcairo2-dev libtool"
+
+install:
   - "mkdir deps"
   - "cd deps"
   - "wget http://poppler.freedesktop.org/poppler-0.24.2.tar.xz"
@@ -31,5 +32,8 @@ before_script:
   - "cmake . && make && sudo make install"
   - "export"
   - "cd ../.."
+
+before_script:
+  - "npm install --dev"
 
 script: "npm test"
