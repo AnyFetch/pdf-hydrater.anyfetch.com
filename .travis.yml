@@ -34,6 +34,6 @@ install:
   - "cd ../.."
 
 before_script:
-  - "npm install --dev"
+  - "npm install --dev --loglevel silent"
 
 script: "npm test"
