@@ -11,6 +11,6 @@ install:
   - "sudo apt-get install -qq pdf2htmlex"
 
 before_script:
-  - "npm install --dev --loglevel silent"
+  - "npm install --dev"
 
 script: "npm test"
