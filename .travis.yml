@@ -1,0 +1,17 @@
+language: node_js
+
+node_js:
+  - "0.10"
+
+before_install:
+  - "sudo add-apt-repository ppa:coolwanglu/pdf2htmlex --yes"
+  - "sudo apt-get update -qq"
+
+install:
+  - "sudo apt-get install -qq pdf2htmlex"
+  - "npm install"
+
+before_script:
+  - "npm install --dev --loglevel error"
+
+script: "npm test"
