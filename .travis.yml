@@ -12,6 +12,6 @@ install:
   - "npm install"
 
 before_script:
-  - "npm install --dev --loglevel error"
+  - "npm install --dev"
 
 script: "npm test"
