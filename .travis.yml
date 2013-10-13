@@ -9,8 +9,9 @@ before_install:
 
 install:
   - "sudo apt-get install -qq pdf2htmlex"
+  - "npm install"
 
 before_script:
-  - "npm install --dev"
+  - "npm install --dev --loglevel error"
 
 script: "npm test"
