@@ -54,16 +54,8 @@ Vagrant.configure("2") do |config|
   config.vm.provision :chef_solo do |chef|
     chef.run_list = [
       "recipe[apt]",
-      "recipe[java]",
       "recipe[nodejs]",
     ]
-
-    chef.json = {
-      :java => {
-        :install_flavor => "openjdk",
-        :jdk_version => "7"
-      }
-    }
   end
 
   config.vm.provision :shell,

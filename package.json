@@ -18,14 +18,13 @@
   },
   "keywords": [
     "cluestr",
-    "hydrator",
+    "hydrater",
     "pdf"
   ],
   "dependencies": {
     "async": "0.2.x",
-    "restify": "2.6.x",
-    "request": "2.26.x",
-    "sspawn": "0.1.1"
+    "sspawn": "0.1.1",
+    "cluestr-file-hydrater": "x.x.x"
   },
   "devDependencies": {
     "mocha": "1.11.x",
