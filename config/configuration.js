@@ -6,8 +6,8 @@
 var node_env = process.env.NODE_ENV || "development";
 var default_port = 8000;
 
-var default_pdf_version = "1.4";
-var default_pdf_path = "/etc/pdf-" + default_pdf_version + "/pdf-app-" + default_pdf_version + ".jar";
+var default_pdf_version = "0.2";
+var default_pdf_path = "pdf2htmlEx";
 
 // Number of pdf instance to run simultaneously per cluster
 var default_concurrency = 1;
@@ -23,6 +23,5 @@ module.exports = {
   workers: process.env.WORKERS || 2,
 
   pdf_version: process.env.pdf_VERSION || default_pdf_version,
-  pdf_path: process.env.pdf_PATH || default_pdf_path,
   concurrency: process.env.pdf_CONCURRENCY || default_concurrency
 };
