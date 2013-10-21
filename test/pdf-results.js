@@ -1,7 +1,6 @@
 'use strict';
 
 require('should');
-var fs = require('fs');
 
 var pdf = require('../lib/hydrater-pdf');
 
@@ -12,7 +11,7 @@ describe('Test pdf results', function() {
       metadatas: {}
     };
 
-    pdf("/vagrant/test/samples/cv.pdf", document, function(err, document) {
+    pdf(__dirname + "/samples/cv.pdf", document, function(err, document) {
       if(err) {
         throw err;
       }
