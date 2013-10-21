@@ -16,7 +16,7 @@ describe('Test pdf results', function() {
         throw err;
       }
       document.should.have.property('metadatas');
-      document.should.have.property('binary_document_type', "pdf-html");
+      document.should.have.property('binary_document_type', "document");
       document.metadatas.should.have.property('html');
 
       document.metadatas.html
