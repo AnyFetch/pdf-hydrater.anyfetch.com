@@ -1,0 +1,39 @@
+# pdf2htmlEX manifest 
+# Copyright (C) 2012,2013 Lu Wang <coolwanglu@gmail.com>
+#
+# Syntax
+# The first char of each line is the command
+# Empty lines are ignored
+#
+# # - comment
+# @ - embed or link to a file from data dir, depending on the values of --embed-*** options
+# $ - special use for pdf2htmlEX
+#
+# Special
+# If a line contains """ only, all text until next """ will be included
+
+#############
+# Styles 
+# base CSS styles - Do not modify
+@base.css
+# PDF specific CSS styles - Do not modify
+$css
+
+
+#############
+# UI stuffs, optional
+# entry point 
+
+
+#############
+# The container of PDF pages
+# check base.css for an example and requirements of its CSS styles
+"""
+<div id="page-container">
+"""
+$pages
+"""
+</div>
+"""
+
+# MANIFEST END
