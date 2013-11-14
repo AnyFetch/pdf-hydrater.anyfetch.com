@@ -24,7 +24,8 @@
   "dependencies": {
     "async": "0.2.x",
     "sspawn": "0.1.1",
-    "cluestr-file-hydrater": "x.x.x"
+    "cluestr-file-hydrater": "x.x.x",
+    "newrelic": "1.x.x"
   },
   "devDependencies": {
     "mocha": "1.11.x",
