@@ -23,7 +23,6 @@
   ],
   "dependencies": {
     "async": "0.2.x",
-    "sspawn": "0.1.1",
     "cluestr-file-hydrater": "x.x.x",
     "newrelic": "1.x.x"
   },
