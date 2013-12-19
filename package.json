@@ -27,10 +27,10 @@
     "newrelic": "1.x.x"
   },
   "devDependencies": {
-    "mocha": "1.11.x",
-    "should": "1.2.x",
-    "supertest": "0.7.x",
-    "jshint": "2.1.x"
+    "mocha": "1.15.x",
+    "should": "2.1.x",
+    "supertest": "0.8.x",
+    "jshint": "2.3.x"
   },
   "licence": "Copyright Papiel",
   "engines": {
