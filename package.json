@@ -14,7 +14,7 @@
   "main": "./lib/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Papiel/papiel_core"
+    "url": "https://github.com/Papiel/hydrater-pdf"
   },
   "keywords": [
     "cluestr",
