@@ -1,6 +1,6 @@
 {
   "name": "cluestr-hydrater-pdf",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "Julien Balian  <julien.balian@supinfo.com>",
   "contributors": [],
   "bin": {
@@ -11,7 +11,7 @@
     "test": "NODE_ENV=test mocha -R spec -t 60000 test/ test/test-*/*",
     "lint": "jshint lib/ test/ config/ bin/"
   },
-  "main": "./lib/pdf-hydrater",
+  "main": "./lib/",
   "repository": {
     "type": "git",
     "url": "https://github.com/Papiel/papiel_core"

@@ -2,7 +2,7 @@
 
 require('should');
 
-var pdf = require('../lib/hydrater-pdf');
+var pdf = require('../lib/');
 
 
 describe('Test pdf results', function() {

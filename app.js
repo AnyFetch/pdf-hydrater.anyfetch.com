@@ -4,7 +4,7 @@
 var cluestrFileHydrater = require('cluestr-file-hydrater');
 
 var config = require('./config/configuration.js');
-var pdfhtml = require('./lib/hydrater-pdf');
+var pdfhtml = require('./lib/');
 
 var serverConfig = {
   concurrency: config.concurrency,
