@@ -23,3 +23,6 @@ docs/*
 
 # Jekyll artifacts
 _site/*
+
+# Anvil builds
+.anvil
