@@ -3,7 +3,6 @@
 require('should');
 
 var pdf = require('../lib/');
-var fs = require('fs');
 
 describe('Test pdf results', function() {
   it('returns the correct informations', function(done) {
@@ -25,21 +24,4 @@ describe('Test pdf results', function() {
     });
   });
 
-  it.only('returns the correct informationsazzer', function(done) {
-    var document = {
-      datas: {}
-    };
-
-    pdf("/media/amoki/8EB6E5E5B6E5CDB1/CHU/Nouveau\\ dossier/chu.pdf", document, function(err, document) {
-      if(err) {
-        throw err;
-      }
-      document.should.have.property('datas');
-      document.should.have.property('document_type', "document");
-      document.datas.should.have.property('html');
-
-      fs.writeFileSync('/tmp/chu.html', document.datas.html);
-      done();
-    });
-  });
 });
