@@ -16,20 +16,29 @@
 # Declaration - Do not modify
 """
 <!DOCTYPE html>
-<!-- Created by pdf2htmlEX (https://github.com/coolwanglu/pdf2htmlex) -->
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="generator" content="pdf2htmlEX">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
 """
 
 #############
 # Styles 
 # base CSS styles - Do not modify
-@base.css
+@base.min.css
+# fancy CSS styles - Optional
+@fancy.min.css
 # PDF specific CSS styles - Do not modify
 $css
+
+
+#############
+# UI stuffs, optional
+
+# compatibility.min.js, extracted from PDF.js
+# To support old browsers like IE9
+@compatibility.min.js
+
 
 #############
 # Do not modify
@@ -38,11 +47,6 @@ $css
 </head>
 <body>
 """
-
-
-#############
-# UI stuffs, optional
-# entry point 
 
 
 #############
@@ -55,6 +59,7 @@ $pages
 """
 </div>
 """
+
 
 #############
 # Do not modify
