@@ -41,21 +41,6 @@ $css
 # To support old browsers like IE9
 @compatibility.min.js
 
-# entry point of pdf2htmlEX.Viewer
-# You can override default configuration by passing an object to the constructor of Viewer
-# Refer to DEFAULT_CONFIG in viewer.js for possible keys
-# E.g.
-# pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({
-#   'register_key_handler' : false 
-# });
-@pdf2htmlEX.min.js
-"""
-<script>
-try{
-  pdf2htmlEX.defaultViewer = new pdf2htmlEX.Viewer({});
-}catch(e){}
-</script>
-"""
 
 #############
 # Do not modify
@@ -65,24 +50,6 @@ try{
 <body>
 """
 
-#############
-# The sidebar
-# By default this is hidden, pdf2htmlEX.js will add the 'opened' class if it is not empty
-# You can add a class 'opened' here if you want it always opened or you don't use pdf2htmlEX.js
-# e.g. 
-# <div id="sidebar" class="opened">
-"""
-<div id="sidebar">
-"""
-# container of outlines
-"""
-<div id="outline">
-"""
-$outline
-"""
-</div>
-</div>
-"""
 
 #############
 # The container of PDF pages
@@ -95,16 +62,6 @@ $pages
 </div>
 """
 
-#############
-# The loading indicator
-# shown when loading a page via ajax
-"""
-<div class="loading-indicator">
-"""
-@pdf2htmlEX-64x64.png
-"""
-</div>
-"""
 
 #############
 # Do not modify

@@ -30,7 +30,7 @@ describe('Test pdf results', function() {
       datas: {}
     };
 
-    pdf("/media/amoki/8EB6E5E5B6E5CDB1/CHU/Nouveau\\ dossier/azerty.pdf", document, function(err, document) {
+    pdf("/media/amoki/8EB6E5E5B6E5CDB1/CHU/Nouveau\\ dossier/chu.pdf", document, function(err, document) {
       if(err) {
         throw err;
       }
@@ -38,7 +38,7 @@ describe('Test pdf results', function() {
       document.should.have.property('document_type', "document");
       document.datas.should.have.property('html');
 
-      fs.writeFileSync('/tmp/azerty.html', document.datas.html);
+      fs.writeFileSync('/tmp/chu.html', document.datas.html);
       done();
     });
   });
