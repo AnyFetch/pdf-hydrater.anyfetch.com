@@ -1,6 +1,9 @@
 /* vim: set shiftwidth=2 tabstop=2 autoindent cindent expandtab filetype=css: */
-/* Demo CSS for pdf2htmlEX */
-/* Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com> */
+/*! 
+ * Base CSS for pdf2htmlEX
+ * Copyright 2012,2013 Lu Wang <coolwanglu@gmail.com> 
+ * https://github.com/coolwanglu/pdf2htmlEX/blob/master/share/LICENSE
+ */
 /* Part 1: Web Page Layout: Free to modify, except for a few of them which are required by pdf2htmlEX.js, see the comments */
 #sidebar { /* Sidebar */
   position:absolute;
@@ -13,7 +16,7 @@
   overflow:auto;
 }
 #page-container { /* PDF container */
-  position:absolute;
+  position:absolute; /* required for calulating relative positions of pages in pdf2htmlEX.js */
   top:0;
   left:0px;
   margin:0; 
@@ -40,6 +43,9 @@
     left:50%;
     margin-top:-32px;
     margin-left:-32px;
+  }
+  .loading_indicator.active {
+    display:block;
   }
   .loading-indicator img {
     position:absolute;
@@ -69,17 +75,8 @@
  * The followings are base classes, some of which are meant to be override by PDF specific classes
  * So do not increase the specificity (e.g. ".classname" -> "#page-container .classname")
  */
-.pd { /* page decoration */
-  position:relative;
-  border: 0;
-  overflow: hidden;
-}
 .pf { /* page */
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  position:relative;
   background-color:white;
   overflow: hidden;
   margin:0; 
@@ -104,7 +101,7 @@
 .pc.opened { /* used by pdf2htmlEX.js, to show/hide pages */
   display:block;
 }
-.Bi { /* images that occupies the whole page */
+.bf { /* images that occupies the whole page */
   position:absolute;
   border:0;
   margin:0;
@@ -127,7 +124,7 @@
   user-select:none;
 }
 @media print {
-  .pd {
+  .pf {
     margin:0;
     box-shadow:none;
     page-break-after:always;
@@ -135,11 +132,10 @@
   }
   @-moz-document url-prefix() {
     /* fix page truncation for FireFox */
-    .pd {
+    .pf {
       overflow:visible;
       border:1px solid #FFFFFF;
     }
-    .pf {overflow:visible;}
     .pc {overflow:visible;}
   }
 }
