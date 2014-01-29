@@ -4,7 +4,6 @@ require('should');
 
 var pdf = require('../lib/');
 
-
 describe('Test pdf results', function() {
   it('returns the correct informations', function(done) {
     var document = {
@@ -24,4 +23,5 @@ describe('Test pdf results', function() {
       done();
     });
   });
+
 });
