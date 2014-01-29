@@ -1,5 +1,5 @@
 {
-  "name": "cluestr-hydrater-pdf",
+  "name": "anyfetch-hydrater-pdf",
   "version": "1.0.0",
   "author": "Julien Balian  <julien.balian@supinfo.com>",
   "contributors": [],
@@ -14,16 +14,16 @@
   "main": "./lib/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Papiel/hydrater-pdf"
+    "url": "https://github.com/Papiel/pdf.hydrater.anyfetch.com"
   },
   "keywords": [
-    "cluestr",
+    "anyfetch",
     "hydrater",
     "pdf"
   ],
   "dependencies": {
     "async": "0.2.x",
-    "cluestr-file-hydrater": "x.x.x",
+    "anyfetch-file-hydrater": "x.x.x",
     "newrelic": "1.x.x"
   },
   "devDependencies": {
@@ -32,7 +32,7 @@
     "supertest": "0.8.x",
     "jshint": "2.3.x"
   },
-  "licence": "Copyright Papiel",
+  "licence": "MIT",
   "engines": {
     "node": ">=0.10"
   }
