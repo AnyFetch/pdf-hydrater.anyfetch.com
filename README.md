@@ -1,7 +1,7 @@
-# Pdf Cluestr Hydrater
-> Visit http://cluestr.com for details about Cluestr.
+# Pdf AnyFetch Hydrater
+> Visit http://anyfetch.com for details about AnyFetch.
 
-Cluestr Hydrater for pdf files
+AnyFetch Hydrater for pdf files
 
 # How to install?
 
