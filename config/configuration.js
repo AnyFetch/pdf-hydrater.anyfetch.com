@@ -14,7 +14,7 @@ if(node_env === "production") {
 }
 
 //The quality (in DPI) of images
-var default_quality = 110;
+var default_quality = 144;
 
 // Exports configuration
 module.exports = {
