@@ -14,13 +14,13 @@ if(node_env === "production") {
 }
 
 //The quality (in DPI) of images
-var default_quality = 55;
+var default_quality = 144;
 
 // Exports configuration
 module.exports = {
   env: node_env,
   port: process.env.PORT || default_port,
   quality: process.env.QUALITY || default_quality,
-  
+
   concurrency: process.env.PDF_CONCURRENCY || default_concurrency
 };
