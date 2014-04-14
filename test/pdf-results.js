@@ -24,4 +24,19 @@ describe('Test pdf results', function() {
     });
   });
 
+  it('should returns an errored document', function(done) {
+    var document = {
+      datas: {}
+    };
+
+    pdf(__dirname + "/samples/errored.pdf", document, function(err, document) {
+      if(err) {
+        throw err;
+      }
+      document.should.have.property("hydrationErrored", true);
+      document.should.have.property("hydrationError");
+      done();
+    });
+  });
+
 });
