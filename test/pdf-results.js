@@ -24,7 +24,7 @@ describe('Test pdf results', function() {
     });
   });
 
-  it('should returns an errored document', function(done) {
+  it('should return an errored document', function(done) {
     var document = {
       datas: {}
     };
