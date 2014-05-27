@@ -6,7 +6,6 @@ var anyfetchFileHydrater = require('anyfetch-file-hydrater');
 var pdf = require('../lib/');
 
 
-
 describe('Test pdf results', function() {
   it('returns the correct informations', function(done) {
     var document = {
@@ -41,7 +40,7 @@ describe('Test pdf results', function() {
         throw err;
       }
       changes.should.have.property("hydration_errored", true);
-      changes.should.have.property("hydration_error");
+      changes.should.have.property("hydration_error").and.containDeep("Error: Error: Command failed: Syntax Warning: May not be a PDF file (continuing anyway)");
       done();
     });
   });
