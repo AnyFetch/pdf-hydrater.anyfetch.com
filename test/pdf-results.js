@@ -1,8 +1,11 @@
 'use strict';
 
 require('should');
+var anyfetchFileHydrater = require('anyfetch-file-hydrater');
 
 var pdf = require('../lib/');
+
+
 
 describe('Test pdf results', function() {
   it('returns the correct informations', function(done) {
@@ -10,12 +13,7 @@ describe('Test pdf results', function() {
       datas: {}
     };
 
-    var changes = {
-      metadatas: {},
-      user_access: [],
-      actions: {},
-      datas: {}
-    };
+    var changes = anyfetchFileHydrater.defaultChanges();
 
     pdf(__dirname + "/samples/cv.pdf", document, changes, function(err, changes) {
       if(err) {
@@ -36,12 +34,7 @@ describe('Test pdf results', function() {
       datas: {}
     };
 
-    var changes = {
-      metadatas: {},
-      user_access: [],
-      actions: {},
-      datas: {}
-    };
+    var changes = anyfetchFileHydrater.defaultChanges();
 
     pdf(__dirname + "/samples/errored.pdf", document, changes, function(err, changes) {
       if(err) {
