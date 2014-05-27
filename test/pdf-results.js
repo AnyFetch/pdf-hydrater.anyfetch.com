@@ -1,8 +1,10 @@
 'use strict';
 
 require('should');
+var anyfetchFileHydrater = require('anyfetch-file-hydrater');
 
 var pdf = require('../lib/');
+
 
 describe('Test pdf results', function() {
   it('returns the correct informations', function(done) {
@@ -10,15 +12,17 @@ describe('Test pdf results', function() {
       datas: {}
     };
 
-    pdf(__dirname + "/samples/cv.pdf", document, function(err, document) {
+    var changes = anyfetchFileHydrater.defaultChanges();
+
+    pdf(__dirname + "/samples/cv.pdf", document, changes, function(err, changes) {
       if(err) {
         throw err;
       }
-      document.should.have.property('datas');
-      document.should.have.property('document_type', "document");
-      document.datas.should.have.property('html');
+      changes.should.have.property('datas');
+      changes.should.have.property('document_type', "document");
+      changes.datas.should.have.property('html');
 
-      document.datas.html
+      changes.datas.html
         .should.include('Matt<span class="_ _0"></span>h<span class="_ _1"></span>i<span class="_ _0"></span>e<span class="_ _2"></span>u');
       done();
     });
@@ -29,12 +33,14 @@ describe('Test pdf results', function() {
       datas: {}
     };
 
-    pdf(__dirname + "/samples/errored.pdf", document, function(err, document) {
+    var changes = anyfetchFileHydrater.defaultChanges();
+
+    pdf(__dirname + "/samples/errored.pdf", document, changes, function(err, changes) {
       if(err) {
         throw err;
       }
-      document.should.have.property("hydration_errored", true);
-      document.should.have.property("hydration_error");
+      changes.should.have.property("hydration_errored", true);
+      changes.should.have.property("hydration_error").and.containDeep("Error: Error: Command failed: Syntax Warning: May not be a PDF file (continuing anyway)");
       done();
     });
   });
