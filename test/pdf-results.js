@@ -5,6 +5,7 @@ var anyfetchFileHydrater = require('anyfetch-file-hydrater');
 
 var pdf = require('../lib/');
 
+var hydrationError = anyfetchFileHydrater.hydrationError;
 
 describe('Test pdf results', function() {
   it('returns the correct informations', function(done) {
@@ -35,13 +36,13 @@ describe('Test pdf results', function() {
 
     var changes = anyfetchFileHydrater.defaultChanges();
 
-    pdf(__dirname + "/samples/errored.pdf", document, changes, function(err, changes) {
-      if(err) {
-        throw err;
+    pdf(__dirname + "/samples/errored.pdf", document, changes, function(err) {
+      if(err instanceof hydrationError) {
+        done();
       }
-      changes.should.have.property("hydration_errored", true);
-      changes.should.have.property("hydration_error").and.containDeep("Error: Error: Command failed: Syntax Warning: May not be a PDF file (continuing anyway)");
-      done();
+      else {
+        done(new Error("invalid error"));
+      }
     });
   });
 
