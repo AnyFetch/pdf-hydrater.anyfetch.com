@@ -10,7 +10,7 @@ var hydrationError = anyfetchFileHydrater.hydrationError;
 describe('Test pdf results', function() {
   it('returns the correct informations', function(done) {
     var document = {
-      datas: {}
+      data: {}
     };
 
     var changes = anyfetchFileHydrater.defaultChanges();
@@ -19,11 +19,11 @@ describe('Test pdf results', function() {
       if(err) {
         throw err;
       }
-      changes.should.have.property('datas');
+      changes.should.have.property('data');
       changes.should.have.property('document_type', "document");
-      changes.datas.should.have.property('html');
+      changes.data.should.have.property('html');
 
-      changes.datas.html
+      changes.data.html
         .should.include('Matt<span class="_ _0"></span>h<span class="_ _1"></span>i<span class="_ _0"></span>e<span class="_ _2"></span>u');
       done();
     });
@@ -31,7 +31,7 @@ describe('Test pdf results', function() {
 
   it('should return an errored document', function(done) {
     var document = {
-      datas: {}
+      data: {}
     };
 
     var changes = anyfetchFileHydrater.defaultChanges();
