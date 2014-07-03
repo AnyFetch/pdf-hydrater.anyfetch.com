@@ -20,7 +20,6 @@ describe('Test pdf results', function() {
         throw err;
       }
       changes.should.have.property('data');
-      changes.should.have.property('document_type', "document");
       changes.data.should.have.property('html');
 
       changes.data.html
