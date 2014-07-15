@@ -14,7 +14,7 @@
   "main": "./lib/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Papiel/pdf.hydrater.anyfetch.com"
+    "url": "https://github.com/Papiel/pdf-hydrater.anyfetch.com"
   },
   "keywords": [
     "anyfetch",
