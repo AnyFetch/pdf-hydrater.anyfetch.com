@@ -22,8 +22,7 @@ describe('Test pdf results', function() {
       changes.should.have.property('data');
       changes.data.should.have.property('html');
 
-      changes.data.html
-        .should.include('Matt<span class="_ _0"></span>h<span class="_ _1"></span>i<span class="_ _0"></span>e<span class="_ _2"></span>u');
+      changes.data.html.should.containDeep('Matt<span class="_ _0"></span>h<span class="_ _1"></span>i<span class="_ _0"></span>e<span class="_ _2"></span>u');
       done();
     });
   });
