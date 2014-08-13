@@ -5,7 +5,7 @@ var anyfetchHydrater = require('anyfetch-hydrater');
 
 var pdf = require('../lib/');
 
-var hydrationError = anyfetchHydrater.hydrationError;
+var HydrationError = anyfetchHydrater.HydrationError;
 
 describe('Test pdf results', function() {
   it('returns the correct informations', function(done) {
@@ -35,7 +35,7 @@ describe('Test pdf results', function() {
     var changes = anyfetchHydrater.defaultChanges();
 
     pdf(__dirname + "/samples/errored.pdf", document, changes, function(err) {
-      if(err instanceof hydrationError) {
+      if(err instanceof HydrationError) {
         done();
       }
       else {
