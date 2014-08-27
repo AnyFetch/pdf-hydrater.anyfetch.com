@@ -4,11 +4,10 @@
 var anyfetchHydrater = require('anyfetch-hydrater');
 
 var config = require('./config/configuration.js');
-var pdfhtml = require('./lib/');
 
 var serverConfig = {
   concurrency: config.concurrency,
-  hydrater_function: pdfhtml
+  hydrater_function: './lib/index.js'
 };
 
 var server = anyfetchHydrater.createServer(serverConfig);
