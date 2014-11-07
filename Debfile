@@ -1,7 +1,7 @@
 http://launchpadlibrarian.net/151932502/libc6_2.15-0ubuntu10.5_amd64.deb
 https://launchpad.net/ubuntu/+archive/primary/+files/libstdc%2B%2B6_4.6.3-1ubuntu5_amd64.deb
 https://launchpad.net/~fkrull/+archive/deadsnakes/+files/python2.7_2.7.4-2%2Blucid1_amd64.deb
-https://launchpad.net/~fkrull/+archive/deadsnakes/+files/libpython2.7_2.7.4-2%2Blucid1_amd64.deb
+https://launchpad.net/~umn-claoit-rce/+archive/ubuntu/build-sandbox/+files/libpython2.7_2.7.4-2%2Blucid1_amd64.deb
 https://launchpad.net/~fkrull/+archive/deadsnakes/+files/python2.7-dev_2.7.4-2%2Blucid1_amd64.deb
 https://launchpad.net/~ricotz/+archive/ppa/+files/liblcms2-2_2.4-0ubuntu1~lucid2_amd64.deb
 https://launchpad.net/~ricotz/+archive/ppa/+files/liblcms2-dev_2.4-0ubuntu1~lucid2_amd64.deb
