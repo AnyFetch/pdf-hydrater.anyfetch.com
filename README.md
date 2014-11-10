@@ -13,4 +13,11 @@ sudo apt-get install -qq pdf2htmlex
 npm install
 ```
 
+# Before deploying on Heroku
+
+You need to set BUILDPACK_URL before deploying on Heroku:
+```sh
+heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
+```
+
 Support: `support@papiel.fr`.
