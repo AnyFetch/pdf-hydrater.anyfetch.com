@@ -22,12 +22,12 @@
   ],
   "dependencies": {
     "async": "0.9.x",
-    "anyfetch-hydrater": "1.0.14"
+    "anyfetch-hydrater": "^2.0.0"
   },
   "devDependencies": {
-    "mocha": "1.20.x",
-    "should": "4.0.x",
-    "supertest": "0.13.x"
+    "mocha": "^2.0.1",
+    "should": "^4.3.0",
+    "supertest": "^0.15.0"
   },
   "licence": "MIT",
   "engines": {

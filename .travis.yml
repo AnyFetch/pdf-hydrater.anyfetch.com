@@ -2,7 +2,8 @@ language: node_js
 
 node_js:
   - "0.10"
-
+services:
+  - redis-server
 before_install:
   - sudo add-apt-repository ppa:coolwanglu/pdf2htmlex --yes
   - sudo apt-get update -qq
