@@ -23,5 +23,6 @@ module.exports = {
   quality: process.env.QUALITY || defaultQuality,
 
   concurrency: process.env.PDF_CONCURRENCY || defaultConcurrency,
-  redisUrl: process.env.REDIS_URL
+  redisUrl: process.env.REDIS_URL,
+  appName: process.env.APP_NAME || "pdf-hydrater"
 };
