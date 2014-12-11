@@ -22,7 +22,9 @@ module.exports = {
   port: process.env.PORT || defaultPort,
   quality: process.env.QUALITY || defaultQuality,
 
-  concurrency: process.env.PDF_CONCURRENCY || defaultConcurrency,
+  concurrency: process.env.CONCURRENCY || defaultConcurrency,
+  tasksPerProcess: process.env.TASKS_PER_PROCESS,
+
   redisUrl: process.env.REDIS_URL,
   appName: process.env.APP_NAME || "pdf-hydrater",
 
