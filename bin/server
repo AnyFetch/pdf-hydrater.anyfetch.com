@@ -1,5 +1,7 @@
 #!/bin/env node
 
+require('heroku-self-ping')(process.env.SELF_URL);
+
 // Load configuration
 var config = require("../config/configuration.js");
 var server = require('../app.js');
