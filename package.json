@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "async": "0.9.x",
-    "anyfetch-hydrater": "^2.1.1",
+    "anyfetch-hydrater": "^2.2.0",
     "heroku-self-ping": "~1.1.1"
   },
   "devDependencies": {
